@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from "@tailwindcss/vite";
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import path from 'path';
+import viteCompression from 'vite-plugin-compression';
+import { visualizer } from 'rollup-plugin-visualizer';
+
 
 export default defineConfig(({command}) => ({
   base: command === 'serve' ? '' : '/dist/',
@@ -20,12 +23,31 @@ export default defineConfig(({command}) => ({
         { src: '../app.dev.gohtml', dest: '.' },
         { src: '../app.prod.gohtml', dest: '.' },
       ]
+    }),
+    viteCompression({
+      threshold: 50000 // 50kb
+    }),
+    visualizer({
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
     })
   ],
   build: {
     outDir: '../cmd/web/dist',
     emptyOutDir: true,
     manifest: true,
+
+    // minify -> terser start
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
+    // minify -> terser end
+
     rollupOptions: {
       input: {
         // scss: "frontend/scss/app.scss",

@@ -27,7 +27,7 @@ A modern web application starter template integrating Go backend with React fron
 
 - Go 1.25+
 - Node.js 23
-- npm or yarn
+- npm
 
 ## Quick Start
 
@@ -44,7 +44,7 @@ make dev
 ```
 
 The application will run at:
-- Backend server: `http://localhost:3000`
+- Backend server: `http://localhost:8090`
 - Vite dev server: `http://localhost:5173`
 
 ### 3. Production Build

@@ -27,7 +27,7 @@
 
 - Go 1.25+
 - Node.js 23
-- npm 或 yarn
+- npm
 
 ## 快速開始
 
@@ -44,7 +44,7 @@ make dev
 ```
 
 應用程式將在以下位置運行：
-- 後端伺服器: `http://localhost:3000`
+- 後端伺服器: `http://localhost:8090`
 - Vite 開發伺服器: `http://localhost:5173`
 
 ### 3. 生產建置
