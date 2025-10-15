@@ -1,14 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <link href="/css/app.css" rel="stylesheet">
+    <title>開發提示 - Development Notice</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 48px;
+        max-width: 600px;
+        text-align: center;
+      }
+
+      .icon {
+        font-size: 64px;
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        color: #2d3748;
+        font-size: 32px;
+        margin-bottom: 16px;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        color: #718096;
+        font-size: 18px;
+        margin-bottom: 32px;
+        line-height: 1.6;
+      }
+
+      .notice {
+        background: #fff5f5;
+        border-left: 4px solid #f56565;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 24px;
+        text-align: left;
+      }
+
+      .notice-title {
+        color: #c53030;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      .notice-text {
+        color: #742a2a;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .server-info {
+        background: #f0fff4;
+        border-left: 4px solid #48bb78;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+      }
+
+      .server-title {
+        color: #2f855a;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      .server-link {
+        display: inline-block;
+        background: #48bb78;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 8px;
+        transition: background 0.3s ease;
+      }
+
+      .server-link:hover {
+        background: #38a169;
+      }
+
+      .footer {
+        margin-top: 32px;
+        color: #a0aec0;
+        font-size: 14px;
+      }
+
+      code {
+        background: #edf2f7;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        color: #2d3748;
+      }
+    </style>
   </head>
   <body>
-    <!-- <div id="app" data-page="{&#34;component&#34;:&#34;Pages/Index&#34;,&#34;props&#34;:{},&#34;url&#34;:&#34;/&#34;,&#34;version&#34;:&#34;&#34;}"></div> -->
-    <!-- <script type="module" src="/app.jsx" ></script> -->
+    <div class="container">
+      <div class="icon">⚠️</div>
+      <h1>開發環境提示</h1>
+      <p class="subtitle">Development Environment Notice</p>
+
+      <div class="notice">
+        <div class="notice-title">請勿在此處進行開發</div>
+        <div class="notice-text">
+          這是靜態前端目錄，不適合直接開發。請使用後端伺服器提供的開發環境以確保正確的整合測試。
+          <hr/>
+          原因: 该專案使用 inertia.js 故不適合直接使用 Vite 服務進行驗證。
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Go + React 整合開發專案</p>
+      </div>
+    </div>
   </body>
 </html>
